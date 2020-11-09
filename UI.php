@@ -5,7 +5,8 @@
     $content = file_get_contents($url);
     if($content !== false)
     {
-        if($content == "True")
+        $arr = json_decode($content, true);
+        if($arr['status'] == "true")
         {
 			#--- 1 ---#
         }
